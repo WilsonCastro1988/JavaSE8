@@ -45,16 +45,37 @@ public class Factura {
         this.activo = activo;
         this.cliente = cliente;
     }
+    
+    public Factura(String item, 
+            String descripcion, int cantidad, 
+            float valorUnit, float subtotal, 
+            float total, float iva, 
+            boolean activo) {
+        this.item = item;
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.valorUnit = valorUnit;
+        this.subtotal = subtotal;
+        this.total = total;
+        this.iva = iva;
+        this.activo = activo;
+    }
 
-    //Metodos
+    //Metodos y Sobrecarga de metodos
     //metodo para verificar si la factura esta activa o no
     public boolean verificacionFacturaActiva(boolean activo) {
         setActivo(activo);
         return isActivo();
     }
 
-    public void verificacionFactura() {
+    public boolean verificacionFacturaActiva(boolean activo,String estado) {
         this.activo = false;
+        return this.activo;
+    }
+    
+    public void verificacionFacturaActiva(boolean activo,String estado, int flag) {
+        this.activo = false;
+       
     }
     
     private void calcularSubTotal()

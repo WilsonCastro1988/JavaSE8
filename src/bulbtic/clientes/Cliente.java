@@ -22,6 +22,8 @@ public class Cliente {
     }
 
     //declaracion de metodos
+    
+    
     //setters y getters
     public String getNombre() {
         return nombre;
